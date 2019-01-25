@@ -1,0 +1,41 @@
+/*所有页面背景色*/
+body {
+    background-color: #eeeeee;
+    margin: 0;
+}
+
+/* -------------------------所有页面header样式--------------------------*/
+header {
+    background-color: red;   /*测试背景色*/
+    position: absolute;
+    left: 20%;
+    right: 20%;
+    display: flex;   /*header元素一行显示*/
+}
+header p {
+    font-size: 28px;
+    /*width: 50%;  !*将左标题设置为header宽度一半*!*/
+    margin-left: 20px;
+    margin-top: 30px;
+    padding-top: 5px;
+}
+header .search {
+    position: absolute;
+    top: 35px;
+    right: 130px;
+    width: 420px;
+    height: 35px;
+    border: rgb(200, 200, 200) 1px solid;
+    /*box-shadow: 5px 5px 3px #888888;*/
+    font-size: 20px;
+}
+header .submit {
+    position: absolute;
+    right: 30px;
+    top: 35px;
+    font-size: 20px;
+    width: 80px;
+    height: 39px;
+    border: rgb(200, 200, 200) 1px solid;
+}
+/* -------------------------所有页面header样式END-----------------------*/
