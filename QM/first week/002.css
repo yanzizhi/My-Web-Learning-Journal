@@ -1,0 +1,83 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* mask */
+#mask {
+    /* position: fixed; */
+    /* top: 0; */
+    background-color: rgba(0.3, 0.3, 0.3, 0.3);
+    height: 100%;
+    width: 100%;
+    z-index: -5;
+    display: none;
+}
+/* card */
+#wrapper {
+    height: 300px;
+    width: 500px;
+    /* border: 1px solid #aaaaaa; */
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    margin-left: -270px;
+    margin-top: -170px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+    /* z-index: 11; */
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    /* box-shadow: 0 0 5px 5px #cccccc; */
+}
+#modal-header {
+    font-size: 24px;
+    height: 40px;
+    line-height: 40px;
+    /* background-color: #dddddd; */
+    border-bottom: 2px solid #dddddd;
+}
+#modal-header span:nth-child(2) {
+    float: right;
+    color: red;
+    cursor: pointer;
+}
+
+#modal-content {
+    width: 90%;
+    /* auto左右平分 */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #eeeeee;
+    height: 150px;
+    overflow: auto;
+}
+
+#btns button {
+    height: 35px;
+    width: 70px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    /* 鼠标变成小手 */
+    cursor: pointer;
+    float: right;
+    margin: 0 10px;
+    color: #ffffff;
+}
+#cancel {
+    background-color: #ad4014;
+}
+#confirm {
+    background-color: blue;
+}
+
+.show {
+    opacity: 1 !important;
+    top: 50% !important;
+    transition: all 0.4s ease-in-out;
+}

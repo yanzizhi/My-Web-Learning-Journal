@@ -1,0 +1,42 @@
+body {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+header {
+    background-color: aqua;
+    padding: 10px 20px;
+}
+header p {
+    display: inline;
+    font-size: 20px;
+}
+header date {
+    float: right;
+}
+
+.page-body {
+    background-color: azure;
+    width: 100%;
+    height: 800px;
+}
+
+footer {
+    /* height: 120px; */
+    background-color: #888888;
+    display: grid;
+    place-items: center center;
+    padding: 20px 0;
+}
+footer p {
+    margin: 10px 0;
+}
+footer :first-child:not(span) {
+    font-size: 22px;
+}
+footer p span {
+    margin-left: 10px;
+}
