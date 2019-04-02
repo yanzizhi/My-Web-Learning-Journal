@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>拖放</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 400px;
+        }
+        
+        #box2 {
+            background-color: aqua;
+            float: left;
+        }
+        
+        #box1 {
+            float: left;
+            background-color: #cccccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1" class="box"></div>
+    <div id="box2" class="box"></div>
+    <img id="img1" src="01.jpg">
+    <div id="msg"></div>
+
+    <script>
+        let box1Div, box2Div, msgDiv, img1;
+        window.onload = function() {
+            box1Div = document.getElementById("box1");
+            box2Div = document.getElementById("box2");
+            msgDiv = document.getElementById("msg");
+            img1 = document.getElementById("img1")
+
+            // box1Div.ondragenter = function(e) {
+            //     console.log(e);
+            //     showObj(e);
+            // }
+
+            box1Div.ondragover = function(e) {
+                e.preventDefault();
+            }
+            box2Div.ondragover = function(e) {
+                e.preventDefault();
+            }
+
+            img1.ondragstart = function(e) {
+                e.dataTransfer.setData("imgId", "img1");
+            }
+
+            box1Div.ondrop = dropImghandler;
+            box2Div.ondrop = dropImghandler;
+
+        };
+
+        function dropImghandler(e) {
+            showObj(e.dataTransfer);
+            e.preventDefault();
+            let img = document.getElementById(e.dataTransfer.getData("imgId"));
+            e.target.appendChild(img);
+
+        }
+
+        function showObj(obj) {
+            // console.log(obj);
+            let s = '';
+            for (let k in obj) {
+                s += k + ":" + obj[k] + "<br/>"
+            }
+            msgDiv.innerHTML = s;
+        }
+    </script>
+</body>
+
+</html>
