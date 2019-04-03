@@ -5,12 +5,12 @@ let mycanvas, context;
 
 window.onload = function() {
     creatCanvas();
-}
+};
 
 
 // 创建canvas
 function creatCanvas() {
-    document.body.innerHTML = "<canvas id=\"mycanvas\" width=\"" + CANVAS_WIDTH + "\" height=\"" + CANVAS_HEIGHT + "\"></canvas>"
+    document.body.innerHTML = "<canvas id=\"mycanvas\" width=\"" + CANVAS_WIDTH + "\" height=\"" + CANVAS_HEIGHT + "\"></canvas>";
     mycanvas = document.getElementById("mycanvas");
     context = mycanvas.getContext("2d");
     // drawRect();
@@ -29,6 +29,6 @@ function drawImage() {
     let img = new Image();
     img.onload = function() {
         context.drawImage(img, 0, 0);
-    }
+    };
     img.src = "01.jpg";
 }
