@@ -1,17 +1,28 @@
 /*所有页面背景色*/
+
+html,
 body {
     background-color: #eeeeee;
-    margin: 0;
+    /* width: 80vw; */
+    margin-top: 0;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
-/* -------------------------所有页面header样式--------------------------*/
+
+/* -------------------------首页header样式--------------------------*/
+
 header {
-    background-color: red;   /*测试背景色*/
-    position: absolute;
-    left: 20%;
-    right: 20%;
-    display: flex;   /*header元素一行显示*/
+    background-color: #ffffff;
+    /*测试背景色*/
+    /* position: relative; */
+    /* width: 80vw; */
+    /* left: 20%; */
+    /* right: 20%; */
+    display: flex;
+    /*header元素一行显示*/
 }
+
 header p {
     font-size: 28px;
     /*width: 50%;  !*将左标题设置为header宽度一半*!*/
@@ -19,23 +30,45 @@ header p {
     margin-top: 30px;
     padding-top: 5px;
 }
+
+header form {
+    /* float: right; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 header .search {
-    position: absolute;
-    top: 35px;
-    right: 130px;
+    /* position: absolute; */
+    /* top: 35px; */
+    /* right: 130px; */
     width: 420px;
     height: 35px;
     border: rgb(200, 200, 200) 1px solid;
     /*box-shadow: 5px 5px 3px #888888;*/
     font-size: 20px;
+    margin-left: 400px;
+    margin-right: 20px;
 }
+
 header .submit {
-    position: absolute;
-    right: 30px;
-    top: 35px;
+    /* position: absolute; */
+    /* right: 30px; */
+    /* top: 35px; */
     font-size: 20px;
     width: 80px;
     height: 39px;
     border: rgb(200, 200, 200) 1px solid;
 }
+
+
 /* -------------------------所有页面header样式END-----------------------*/
+
+
+/* 页面主题样式 */
+
+.page-body {
+    background-color: #ffffff;
+    margin-top: 10px;
+    padding: 30px;
+}
