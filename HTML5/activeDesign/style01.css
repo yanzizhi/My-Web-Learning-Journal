@@ -1,0 +1,116 @@
+/* 初始化设置 */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.heading,
+.container,
+.footing {
+    /* auto为左右平分 */
+    margin: 10px auto;
+}
+
+.heading {
+    height: 100px;
+    background-color: antiquewhite;
+}
+
+.left,
+.right,
+.main {
+    background-color: rgb(111, 46, 185);
+}
+
+.footing {
+    height: 100px;
+    background-color: bisque;
+}
+
+
+/* 针对不同设备的样式 */
+
+
+/* 当屏幕最小尺寸为960px时 */
+
+@media screen and (min-width:960px) {
+    .heading,
+    .container,
+    .footing {
+        width: 960px;
+    }
+    .left,
+    .main,
+    .right {
+        float: left;
+        height: 500px;
+    }
+    .left,
+    .right {
+        width: 200px;
+    }
+    .main {
+        margin: 0px 5px;
+        width: 550px;
+    }
+    .container {
+        height: 500px;
+    }
+}
+
+
+/* 当屏幕尺寸在600px-960px之间时 */
+
+@media screen and (min-width: 600px) and (max-width:960px) {
+    .heading,
+    .container,
+    .footing {
+        width: 600px;
+    }
+    .left,
+    .main {
+        float: left;
+        height: 400px;
+    }
+    .right {
+        display: none;
+    }
+    .left {
+        width: 160px;
+    }
+    .main {
+        width: 435px;
+        margin-left: 5px;
+    }
+    .container {
+        height: 400px;
+    }
+}
+
+
+/* 当屏幕尺寸小于600px时，即最大尺寸为600px */
+
+@media screen and (max-width: 600px) {
+    .heading,
+    .container,
+    .footing {
+        width: 400px;
+    }
+    .left,
+    .right {
+        width: 400px;
+        height: 100px;
+    }
+    .main {
+        margin-top: 10px;
+        width: 400px;
+        height: 200px;
+    }
+    .right {
+        margin-top: 10px;
+    }
+    .container {
+        height: 420px;
+    }
+}
