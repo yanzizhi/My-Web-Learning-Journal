@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box1 {
+            height: 200px;
+            width: 400px;
+            background-color: green;
+            font-size: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <script>
+        document.addEventListener("keydown", keydown);
+        let context = "";
+
+        function keydown(event) {
+            console.log(event);
+            let txt = event.key;
+            console.log(txt);
+            context += txt;
+            let box = document.getElementById("box1");
+            console.log(box);
+            box.innerHTML = context;
+        }
+    </script>
+</head>
+
+<body>
+    <div id="box1"></div>
+</body>
+
+</html>
