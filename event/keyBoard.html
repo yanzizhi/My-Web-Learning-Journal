@@ -18,6 +18,11 @@
         }
     </style>
     <script>
+        window.onload = function() {
+            alert("网页加载完毕");
+            console.log(closed);
+            console.log(window.name);
+        };
         document.addEventListener("keydown", keydown);
         let context = "";
 
