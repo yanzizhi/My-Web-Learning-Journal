@@ -1,0 +1,15 @@
+#position1 {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    position: relative;
+    left: 30px;
+    top: 30px;
+}
+
+#position2 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: relative;
+}
