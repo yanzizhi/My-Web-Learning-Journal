@@ -12,4 +12,14 @@ $(document).ready(function() {
 
         ulNode.slideToggle(500);
     });
+
+    $(".hmain").hover(function() {
+        // over
+        let ulNode = $(this).children("ul");
+        ulNode.slideDown();
+    }, function() {
+        // out
+        let ulNode = $(this).children("ul");
+        ulNode.slideUp();
+    });
 });

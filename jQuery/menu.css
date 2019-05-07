@@ -8,7 +8,8 @@ ul {
     margin: 0;
 }
 
-.main {
+.main,
+.hmian {
     background-color: #666666;
     width: 100px;
 }
@@ -38,5 +39,22 @@ a {
 }
 
 .main ul {
+    display: none;
+}
+
+.hmain {
+    float: left;
+    background-color: #666666;
+}
+
+.hmain a {
+    color: #ffffff;
+}
+
+.hmain li a {
+    color: #000000;
+}
+
+.hmain ul {
     display: none;
 }
