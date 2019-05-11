@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.3.1.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="002.js"></script>
+    <link href="jquery-ui.min.css" type="text/css" rel="stylesheet">
+
+    <style>
+        .ui-menu:after {
+            content: ".";
+            display: block;
+            clear: both;
+            visibility: hidden;
+            line-height: 0;
+            height: 0;
+        }
+        
+        .ui-menu .ui-menu-item {
+            float: left;
+            margin: 0;
+            padding: 10px;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="accordion">
+        <h3>选项1</h3>
+        <div>
+            <p>
+                hellohellohellohellohellohellohellohellohellohellohello hellohellohellohellohellohellohellohellohellohellohello hellohellohellohellohellohellohellohellohellohellohello
+            </p>
+        </div>
+
+        <h3>选项2</h3>
+        <div>
+            <p>
+                hellohellohellohellohellohellohellohellohellohellohello hellohellohellohellohellohellohellohellohellohellohello hellohellohellohellohellohellohellohellohellohellohello
+            </p>
+        </div>
+
+        <h3>选项3</h3>
+        <div>
+            <p>
+                hellohellohellohellohellohellohellohellohellohellohello hellohellohellohellohellohellohellohellohellohellohello hellohellohellohellohellohellohellohellohellohellohello
+            </p>
+        </div>
+
+        <h3>选项4</h3>
+        <div>
+            <p>
+                hellohellohellohellohellohellohellohellohellohellohello hellohellohellohellohellohellohellohellohellohellohello hellohellohellohellohellohellohellohellohellohellohello
+            </p>
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <label for="tags">Tags:</label>
+    <input id="tags">
+
+    <br/>
+    <br/>
+    <br/>
+
+    <p>Date:<input type="text" id="datepicker"></p>
+    <a href="#" id="btn">按钮</a>
+
+    <br/>
+    <br/>
+    <br/>
+    <div id="div">
+        <p>这是一个对话框</p>
+    </div>
+    <a href="#" id="btn1">按钮</a>
+
+
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="pb"></div>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <ul id="menu">
+        <li>
+            <a href="#">Java</a>
+            <ul>
+                <li><a href="#">Java EE</a></li>
+                <li><a href="#">Java SE</a></li>
+                <li><a href="#">Java ME</a></li>
+            </ul>
+        </li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>C</li>
+        <li>C++</li>
+    </ul>
+
+
+    <br/>
+    <br/>
+    <br/>
+    <span id="span">0</span>
+    <div id="slider"></div>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <input id="input">
+    <button id="btn3">getValue</button>
+
+
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="tabs">
+        <ul>
+            <li><a href="#hello1">hello</a></li>
+            <li><a href="#hello2">hello</a></li>
+            <li><a href="#hello3">hello</a></li>
+        </ul>
+
+        <div id="hello1">
+            第一个内容1 第一个内容1 第一个内容1 第一个内容1
+        </div>
+
+        <div id="hello2">
+            h放假啊高房价到附近够爱工卡大公开打工啊空间哦噶
+        </div>
+
+        <div id="hello3">
+            hello hello hello hello hello
+        </div>
+    </div>
+
+    <br/>
+    <br/>
+    <br/>
+</body>
+
+</html>
