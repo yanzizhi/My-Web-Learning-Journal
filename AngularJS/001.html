@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular JS</title>
+</head>
+
+<body>
+    <div ng-app="" ng-init="quantity=1; cost=5; person={firstName:'Jhon', lastName:'Doe'}">
+        <p>总价： {{quantity * cost + ", quantity的值为: " + quantity}}</p>
+        <p>{{person.lastName}}</p>
+    </div>
+
+
+    <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+</body>
+
+</html>
