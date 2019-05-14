@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="" ng-init="mySwitch=true">
+        <button ng-disabled="mySwitch">Click me</button>
+        <input type="checkbox" ng-model="mySwitch">
+
+        <p>{{mySwitch}}</p>
+        <p ng-show="mySwitch">段落</p>
+    </div>
+</body>
+
+</html>

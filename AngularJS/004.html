@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+    <style>
+        table {
+            /* 清除单元格间距 */
+            border-spacing: 0;
+        }
+        
+        td {
+            margin: 0;
+            width: 240px;
+            height: 60px;
+            font-size: 32px;
+            border: 1px solid green;
+            text-align: center;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="customersCtrl">
+        <table>
+            <!-- 根据name排序 -->
+            <tr ng-repeat="x in names | orderBy : 'name'">
+
+                <td ng-if="$odd" style="background-color: #dddddd">{{$index + 1}}</td>
+                <td ng-if="$even">{{$index + 1}}</td>
+
+                <td ng-if="$odd" style="background-color: #dddddd">{{x.name}}</td>
+                <td ng-if="$even">{{x.name}}</td>
+
+                <!-- 将country全部变为大写 -->
+                <td ng-if="$odd" style="background-color: #dddddd">{{x.country | uppercase}}</td>
+                <td ng-if="$even">{{x.country | uppercase}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        let app = angular.module("myApp", []);
+        app.controller("customersCtrl", function($scope) {
+            $scope.names = [{
+                name: "zhangsan",
+                country: "zhongguo"
+            }, {
+                name: "lisi",
+                country: "America"
+            }, {
+                name: "zhangsan",
+                country: "zhongguo"
+            }, {
+                name: "lisi",
+                country: "America"
+            }, {
+                name: "zhangsan",
+                country: "zhongguo"
+            }, {
+                name: "lisi",
+                country: "America"
+            }, {
+                name: "zhangsan",
+                country: "zhongguo"
+            }, {
+                name: "lisi",
+                country: "America"
+            }, ]
+        });
+    </script>
+</body>
+
+</html>
