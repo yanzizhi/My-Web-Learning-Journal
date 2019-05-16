@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Angular表单</title>
+    <script src="https://cdn.staticfile.org/angular.js/1.4.6/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="">
+        <form>
+            选择一个选项：
+            <select ng-model="myChoice">
+                <option value=""></option>
+                <option value="Fighting.">A</option>
+                <option value="There is only effert.">B</option>
+                <option value="Be a better man.">C</option>
+            </select>
+        </form>
+        <h3>
+            The option you choice is {{myChoice}}.
+        </h3>
+    </div>
+</body>
+
+</html>
