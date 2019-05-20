@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js计算属性</title>
+    <script src="vue.min.js"></script>
+</head>
+
+<body>
+    <div id="myApp">
+        <p>原始字符串：{{message}}</p>
+        <p>计算后反转字符串：{{reverseMessage}}</p>
+    </div>
+
+    <script>
+        let vm = new Vue({
+            el: "#myApp",
+            data: {
+                message: "Hello world"
+            },
+
+            computed: {
+                //计算属性的getter
+                reverseMessage: function() {
+                    //this指向vm实例
+                    return this.message.split('').reverse().join('');
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
