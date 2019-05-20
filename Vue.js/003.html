@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js条件语句</title>
+    <script src="vue.min.js"></script>
+</head>
+
+<body>
+
+    <div id="myApp">
+
+        <div v-if="choice == 'A'">
+            <h1>选项A</h1>
+        </div>
+        <div v-else-if="choice == 'B'">
+            <h2><b>选项B</b></h2>
+        </div>
+        <div v-else-if="choice == 'C'">
+            <h2><b>选项C</b></h2>
+        </div>
+        <div v-else>
+            <h1>没得选</h1>
+        </div>
+
+        <div v-for="(name, index) in names">
+            <h3>{{index}} : {{name}}</h3>
+        </div>
+
+        <ol>
+            <li v-for="site in sites">
+                {{ site.name }}
+            </li>
+        </ol>
+
+        <div v-for="(value,key, index) in object">
+            <!-- 先将非对象部分显示 -->
+            <h4 v-if="typeof value !== 'object'">{{index}}: {{key}}, {{value}}</h4>
+
+            <!-- 再处理需循环嵌套的部分 -->
+            <h4 v-if="typeof value == 'object'">{{index}}: {{key}}
+                <li v-for="(x, y) in value">
+                    索引：{{y}}；值：{{x}}: 这是外部的索引{{index}}
+                </li>
+            </h4>
+        </div>
+
+        <!-- 乘法表 -->
+        <div v-for="x in 9">
+            <h3 v-for="y in x" style="display: inline-block">
+                <pre>{{y}} * {{x}} = {{x*y}};    </pre>
+            </h3>
+        </div>
+    </div>
+
+    <!-- <div v-for="name in names">
+        <h3>{{name.name}}</h3>
+    </div> -->
+
+
+    <script>
+        new Vue({
+            el: "#myApp",
+            data: {
+                choice: "D",
+
+                names: ["zhangsan", "lisi", "wangwu"],
+
+                sites: [{
+                    name: 'Runoob'
+                }, {
+                    name: 'Google'
+                }, {
+                    name: 'Taobao'
+                }],
+
+                object: {
+                    name: '菜鸟教程',
+                    url: 'http://www.runoob.com',
+                    slogan: '学的不仅是技术，更是梦想！',
+                    ddd: [1, 2, 3],
+                    fff: [4, 25, 33],
+                },
+
+
+            }
+        })
+    </script>
+</body>
+
+</html>

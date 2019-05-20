@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js条件与循环</title>
+    <script src="vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app1">
+        <p v-if="seen">This is a paragraph</p>
+    </div>
+
+    <div id="app2">
+        <p v-if="seen">This is another paragraph</p>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app1",
+            data: {
+                seen: true,
+            }
+        });
+        new Vue({
+            el: "#app2",
+            data: {
+                seen: false,
+            }
+        });
+    </script>
+</body>
+
+</html>

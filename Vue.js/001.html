@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js 基础</title>
+    <script src="vue.min.js"></script>
+</head>
+
+<body>
+    <div id="vue_det">
+        <h1>site: {{site}}</h1>
+        <h1>url: {{url}}</h1>
+        <h1>{{details()}}</h1>
+
+        <div v-html="myHtml"></div>
+
+        <input v-model="input">
+        <p>输入框输入的内容将会动态显示在下面</p>
+        <h1>{{input}}</h1>
+        <button v-on:click="reverseMessage">反转输入的字符串</button>
+    </div>
+
+    <script type="text/javascript">
+        let vm = new Vue({
+            el: "#vue_det",
+            data: {
+                site: "菜鸟教程",
+                url: "www.runoob.com",
+                alexa: "10000",
+                myHtml: "<h3>这是插入的html</h3>",
+                input: ""
+            },
+            methods: {
+                details: function() {
+                    return this.site + " - 学习的不仅是技术，更是梦想。";
+                },
+                reverseMessage: function() {
+                    this.input = this.input.split('').reverse().join('');
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>
