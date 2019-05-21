@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js事件处理器</title>
+    <script src="vue.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <button v-on:click="counter += 1">Click me</button>
+        <p>这个按钮被点击了 {{counter}} 次。</p>
+        <button @click="counter = 0">重置</button>
+        <br/>
+        <br/>
+        <button v-on:click="greet">Greet</button>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                counter: 0,
+            },
+
+            methods: {
+                greet: function(event) {
+                    alert("Hello Vue.js");
+                    if (event) {
+                        alert(event.target.tagName)
+                    }
+                }
+            },
+        })
+    </script>
+</body>
+
+</html>
